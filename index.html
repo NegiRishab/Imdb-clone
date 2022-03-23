@@ -5,30 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Imdb Clone</title>
-  <script
-    src="https://code.jquery.com/jquery-3.6.0.js"
-    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+
+  <!--  (1) this is a movie search container in this we have input ,submit button and my favourite list  -->
     <div class="movie-search">
         <h1>To get Movie information just search here</h1>
         <label for="movie-name">Movie:</label>
-
-        
-
-          <input type="text" id="movie-name" placeholder="Movie....">
+           <input type="text" id="movie-name" placeholder="Movie....">
          
-        
-        
-        <button  id="submit">Submit</button>
-        <a href="favorite.html">
-          <button id="myfavourite"  >My Favourite Movies</button>
-        </a>
+           <button  id="submit">Submit</button>
+          <!-- (3) in movies there are favorite button click on that movie add in my favourite container  -->
+           <a href="favorite.html">
+              <button id="myfavourite"  >My Favourite Movies</button>
+           </a>
     </div>
 
+    <!--  (2)  this i movies container whenever we call api new movie add this container  -->
     <div id="movies"></div>
  
     
