@@ -1,4 +1,4 @@
-// (1) when we click on movie this page open and we give  information about movie in detail  
+// (1) when we click on movie this page open and we give  information about movie in detail..  
 
 var url=localStorage.getItem("Poster");
 var title=localStorage.getItem("Title")
