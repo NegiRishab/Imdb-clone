@@ -9,30 +9,70 @@ var image = document.getElementById("movies")
 var favorite = document.getElementById("myfavourite")
 var currmovies;
 var submit = document.getElementById("submit");
-
+var autosearch=document.getElementById("autosearch");
 
 
 
 
 
 let m_name = "";
-document.getElementById("movie-name").addEventListener("keypress", function (e) {
+input.addEventListener("keypress", function (e) {
     m_name += e.key;
     console.log(m_name);
     //    let url="http://www.omdbapi.com/?t="+m_name+"&apikey=dcf45266";
 
+myautocomplete();
+ 
+})
 
+
+function myautocomplete(){
     var xhr = new XMLHttpRequest();
     xhr.open("get", "http://www.omdbapi.com/?t=" + m_name + "&apikey=dcf45266");
     xhr.send();
 
     xhr.onload = function (data) {
         var data = JSON.parse(xhr.response);
-        console.log("movie name" + " " + data.Title);
+        // console.log("movie name" + " " + data.Title);
+        autosearch.innerHTML=data.Title;
+        // console.log(autosearch);
+        autosearch.addEventListener("click",function(){
+         
+            input.value=autosearch.innerText;
+        })
+
     }
+}
+input.addEventListener("keydown",function(e){
+    
+    
+    if(e.keyCode===8){
+            if(input.value.length===1){
+                location.reload();
+            }
+            
+            
+            var newinput=input.value;
+            newinput= newinput.substr(0, newinput.length - 1);
+            // console.log();
+            //    console.log( "hey"+" " +newinput);
+            
+            if(input.value.length===1){
+                autosearch.innerHTML="";
+                console.log("lst");
+                input.value="";
+                newinput="";
+                return;
+            }
+            
+            m_name=newinput;
+            myautocomplete();
+            console.log(newinput);
+            
+        }
+    
+   
 })
-
-
 
 
 

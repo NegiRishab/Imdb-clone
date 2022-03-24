@@ -60,3 +60,15 @@ label{
     background-color: red;
     margin: 25px;
 }
+#autosearch{
+    font-size: 16px;
+    margin-right: 150px;
+}
+#autosearch:hover{
+    color: black;
+   letter-spacing: 2px;
+  
+}
+.hidden{
+    display: hidden;
+}
