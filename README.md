@@ -12,4 +12,4 @@ this is my imdb clone project
 learn about local storage, debug lot of problems , study about how array works in to call elemnts in function, good practice of ajax request 
  # help 
  google , youtube ,coding ninjas Ta (in one case) 
-  # this is the link of project i hope you enjoy it 
+  # this is the link of project i hope you enjoy it https://negirishab.github.io/Imdb-clone/
